@@ -80,7 +80,7 @@
 //   `Загальна сума замовлення ${payment} кредитів. Перевіряємо кількість доступних коштів на рахунку.`
 // );
 // if (payment <= balance) {
-//   let differ = balance - payment;
+//   balance -= payment;
 //   console.log(`На рахунку залишилось ${differ} кредитів.`);
 //   console.log('Знімаємо гроші... Дякуємо за покупку!');
 // } else {
@@ -88,26 +88,44 @@
 //   console.log('Операція завершена.');
 // }
 
-// Розрахунок знижки
+// // Розрахунок знижки
 // const totalSpent = 2000;
 // let payment = 4000;
 // let discount = 0;
 
 // if (payment >= 100 && payment < 1000) {
-//   discount = 2;
+//   discount = 0.02;
 //   console.log(
-//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount}%`
+//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount * 100}%`
 //   );
 // } else if (payment >= 1000 && payment < 5000) {
-//   discount = 5;
+//   discount = 0.05;
 //   console.log(
-//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount}%`
+//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount * 100}%`
 //   );
 // } else if (payment >= 5000) {
-//   discount = 10;
+//   discount = 0.1;
 //   console.log(
-//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount}%`
+//     `Оформлюємо замовлення на суму ${payment} зі знижкою ${discount * 100}%`
 //   );
 // } else {
 //   console.log(`У вас ще немає партнерської знижки`);
 // }
+
+const btnAdd = document.querySelector('button[data-add]');
+const btnReset = document.querySelector('button[data-reset]');
+const dataInput = document.querySelector('input[data-value]');
+const output = document.querySelector('p[data-output]');
+let total = 0;
+btnAdd.addEventListener('click', function () {
+  console.log('click Add');
+  const value = Number(dataInput.value);
+  console.log(value);
+  total += value;
+  output.textContent = total;
+  console.log(total);
+});
+btnReset.addEventListener('click', function () {
+    total = 0;
+    output.textContent = 0
+})
