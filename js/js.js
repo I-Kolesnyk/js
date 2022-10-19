@@ -88,7 +88,6 @@
 // }
 // console.log('Операція завершена.');
 
-
 // // Розрахунок знижки
 // const totalSpent = 2000;
 // let payment = 4000;
@@ -235,16 +234,16 @@
 // }
 // console.log(`Total salary is ${totalSalary}`);
 
-// const min = 6;
-// const max = 13;
-// let total = 0;
+const min = 6;
+const max = 13;
+let total = 0;
 
-// for (let i = min; i <= max; i += 1) {
-//   if (i % 2 !== 0) {
-//     console.log('odd', i);
-//     continue;
-//   }
-//   console.log('even', i);
-//   total += i;
-// }
-// console.log('total:', total);
+for (let i = min; i <= max; i += 1) {
+  if (i % 2 !== 0) {
+    console.log('odd', i);
+    continue;
+  }
+  console.log('even', i);
+  total += i;
+}
+console.log('total:', total);
