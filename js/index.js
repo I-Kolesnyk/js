@@ -247,4 +247,12 @@
 //   total += i;
 // }
 // console.log('total:', total);
-console.log(19);
+
+// function getExtremeElements(array) {
+//   // Change code below this line
+//   const firstElement = array.slice(0, 1);
+//   const lastElement = array.slice(-1);
+//   const newArray = firstElement.concat(lastElement);
+//   console.log(newArray);
+//   // Change code above this line
+// }
