@@ -256,3 +256,46 @@
 //   console.log(newArray);
 //   // Change code above this line
 // }
+// function splitMessage(message, delimiter) {
+//   let words;
+//   message = 'Mango hurries to the train';
+//   // Change code below this line
+//   words = message.split(' ');
+//   // Change code above this line
+//   console.log(words);
+// }
+// let message = 'Mango hurries to the train';
+// let words = message.split(' ');
+// console.log(words);
+
+// let message = 'JavaScript is in my blood';
+// const pricePerWord = 10;
+// let words = message.split(' ');
+// console.log(words);
+// const length = words.length;
+// console.log(length);
+// const price = length * pricePerWord;
+// console.log(price);
+
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) {
+//   // Change this line
+//   console.log(i);
+// }
+// const number = 3;
+// let sum = 0;
+// for (let i = 1; i <= number; i += 1) {
+//   console.log((sum += i));
+// }
+
+// let total = 0;
+// const order = [12, 85, 37, 4];
+// for (let i = 0; i < order.length; i += 1) {
+//   console.log(order[i]);
+//   const orderToNumber = Number(order[i]);
+
+//   total += orderToNumber;
+// }
+// console.log(total);
