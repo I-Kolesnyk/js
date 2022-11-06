@@ -438,7 +438,7 @@
 // removeCourse('React'); console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express'] removeCourse('Vue'); // 'Курс з таким іменем не знайдено'
 
 // updateCourse('Express', 'NestJS'); console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS'] `
-const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
 
 // const addCourse = function (name) {
 //   if (courses.includes(name)) {
@@ -476,3 +476,20 @@ const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
 //   console.log(courses);
 // };
 // updateCourse('React', 'NestJS');
+
+// // 2. Напиши функцію min(a,b), яка повертає менше з чисел a та b.
+
+// const min = function(a,b) {
+//     if(a > b) {
+//         return b;
+//     } else return a;
+// }
+
+// console.log(min(2, 5));
+// console.log(min(3, -1));
+// console.log(min(1, 1));
+
+// 3. Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядки. Значення гарантовано розділені пробілом.
+// function getRectArea(dimensions) {}
+
+// console.log(getRectArea('8 11'));
