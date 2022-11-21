@@ -69,3 +69,100 @@
 // };
 
 // console.log(filter(fruits, getFruitsWithQuantity));
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     for (const pizza of this.pizzas) {
+//       if (pizzaName !== pizza) {
+//         onError(
+//           `There is no pizza with a name ${pizzaName} in the assortment.`
+//         );
+//         return;
+//       }
+//     }
+//     onSuccess(pizzaName);
+//     return;
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// // pizzaPalace.order('Smoked', makePizza, onOrderError);
+// // pizzaPalace.order('Four meats', makePizza, onOrderError);
+// console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+// // pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       newArray.push(numbers[i] + value);
+//     } else {
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   return newArray;
+//   // Change code above this line
+// }
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+class User {
+  email;
+
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+class Admin extends User {
+  // Change code below this line
+
+  static AccessLevel = {
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
+  };
+  blacklistedEmails;
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+    this.blacklistedEmails = [];
+  }
+  blacklist(email) {
+    this.blacklistedEmails.push(email);
+  }
+  isBlacklisted(email) {
+    return this.blacklistedEmails.includes(email);
+  }
+  // Change code above this line
+}
+
+const mango = new Admin({
+  email: 'mango@mail.com',
+  accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+mango.blacklist('poly@mail.com');
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted('mango@mail.com')); // false
+console.log(mango.isBlacklisted('poly@mail.com')); // true
